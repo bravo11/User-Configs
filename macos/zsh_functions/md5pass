@@ -1,0 +1,2 @@
+echo -n md5
+echo -n $1$2 | md5sum | cut -d' ' -f1

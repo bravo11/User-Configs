@@ -1,0 +1,40 @@
+trim='a-zA-Z0-9'
+count=''
+type='alnum'
+
+while getopts ":c:t:h" opt; do
+	case $opt in
+		c )
+			count="$OPTARG"
+		;;
+		t )
+			type="$OPTARG"
+		;;
+		h )
+			echo "Usage: "
+			echo "    -c <COUNT>"
+			echo "    -t <TYPE>"
+			echo "Type can be:"
+			echo "     alnum (Alpha Numeric) [default]"
+			echo "     hex   (Hexcode)"
+			echo "     owasp (OWASP)"
+		;;
+		? )
+			echo "Invalid option $OPTARG" 1>&2; exit 1;
+		;;
+		: )
+			echo "Option $OPTARG requires argument" 1>&2; exit 1;
+		;;
+	esac
+done
+		
+if [[ -z $count ]]; then read "count?Enter desired number of characters: "; fi
+if [[ -z $type ]]; then read "type?Enter desired type: "; fi
+
+if [[ $type = 'hex' ]]; then 
+	trim='a-f0-9'
+elif [[ $type = 'owasp' ]]; then
+	trim='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
+fi
+
+cat /dev/urandom | LC_ALL=C tr -dc "$trim" | LC_ALL=C tr -s "$trim" | head -c "$count"; echo

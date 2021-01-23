@@ -1,0 +1,53 @@
+set nocompatible
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'w0rp/ale'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'cespare/vim-toml'
+Plugin 'rust-lang/rust.vim'
+Plugin 'hashivim/vim-terraform'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+
+call vundle#end()
+filetype plugin on
+syntax on
+set autoindent
+set number
+set relativenumber
+"inoremap ;; <Esc>
+set backspace=indent,eol,start
+set ts=2
+set sw=2
+set sts=2
+
+"set backup
+"set writebackup
+au BufWritePre * !cp % ~/.vim_backups/$(echo %:p | sed 's/\(.*\/\)\(.*\)/\2\/\1/g' | sed 's/\//::/g' | sed 's/::::/@/')$(date +\%Y\%m\%d\%H\%M\%S).bak
+
+" YCM Settings
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
+:command Json %!python -m json.tool
+:command Nonum set nonumber norelativenumber
+:command Num set number relativenumber
+
+"RLS
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
