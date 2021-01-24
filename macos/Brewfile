@@ -1,0 +1,22 @@
+# Yubikey Support
+brew "gpg"
+brew "gnupg"
+brew "pinentry-mac"
+brew "opensc"
+brew "ykman"
+
+# CLI tools
+brew "vim"
+brew "htop"
+brew "cmake"
+brew "coreutils"
+brew "git"
+brew "zsh"
+
+# Languages
+brew "python3"
+brew "ruby"
+brew "perl"
+
+# Other
+brew "libdvdcss"
