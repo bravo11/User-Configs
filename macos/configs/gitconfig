@@ -1,0 +1,9 @@
+[user]
+	email = me@drick.org
+	name = Dalton Rick
+	signingkey = C9A92998FF289FEE
+[commit]
+  	gpgsign = true
+
+[core]
+	excludesfile = /Users/daltonrick/.gitignore_global

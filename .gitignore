@@ -1,0 +1,58 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Common Backup Files #
+#######################
+*.pyo
+*.pyc
+*~
+*.bak
+**/*~
+**/*.bak
+**/*.sw[abcdefghijklmnop]
+*#
+
+#Vim temp files
+*.s??
+
+# Personal
+*.ignore
+ignore.*
+*.conf
+
+# Repo
+Brewfile.lock.json
