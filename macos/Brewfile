@@ -4,6 +4,7 @@ brew "gnupg"
 brew "pinentry-mac"
 brew "opensc"
 brew "ykman"
+brew "yubico-piv-tool"
 
 # CLI tools
 brew "vim"
