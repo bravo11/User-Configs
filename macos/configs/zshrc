@@ -142,5 +142,5 @@ if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc' ];
 
 # Source system specific options
 if [[ -d ${HOME}/.zshrc.d ]]; then
-	source "${HOME}/.zshrc.d/*"
+	for file (${HOME}/.zshrc.d/**/*.zsh(N.)) . $file
 fi
