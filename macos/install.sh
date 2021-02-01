@@ -12,6 +12,22 @@ if ! which brew &> /dev/null; then
 fi
 brew bundle
 
+## Karabiner
+karabiner_version="$(curl -s https://api.github.com/repos/pqrs-org/Karabiner-Elements/releases/latest \
+	| grep "tag_name" \ 
+	| sed -E 's/.*"v(.*)",/\1/')"
+
+karabiner_name="Karabiner-Elements-${karabiner_version}.dmg"
+
+curl -L -o "$karabiner_name" \
+		"https://github.com/pqrs-org/Karabiner-Elements/releases/download/v$karabiner_version/$karabiner_name"
+
+echo "Please install Karabiner-Elements:"
+
+open -a finder $karabiner_name 
+
+read -p "Press Enter when done" _
+
 # Install configs
 ## Install vimrc
 ln -sf "${BASE_PATH}/configs/vimrc" "${HOME}/.vimrc"
