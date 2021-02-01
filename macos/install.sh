@@ -31,6 +31,8 @@ read -p "Press Enter when done" _
 # Install configs
 ## Install vimrc
 ln -sf "${BASE_PATH}/configs/vimrc" "${HOME}/.vimrc"
+mkdir -p "${HOME}/.vim_backups"
+vim +PluginInstall +qall
 
 ## Install configs
 ln -sf "${BASE_PATH}/configs/zshrc" "${HOME}/.zshrc"
@@ -46,7 +48,8 @@ mkdir -p "${HOME}/.config/karabiner"
 ln -sf "${BASE_PATH}/configs/karabiner.json" "${HOME}/.config/karabiner/karabiner.json"
 
 ## Install iterm2 Prefs
-ln -sf "${BASE_PATH}/configs/iterm2.plist" "${HOME}/Library/Preferences/com.googlecode.iterm2.plist"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${BASE_PATH}/configs/com.googlecode.iterm2.plist"
 
 ## Global git configs
 ln -sf "${BASE_PATH}/configs/gitconfig" "${HOME}/.gitconfig"
