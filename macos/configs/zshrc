@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export REQUESTS_CA_BUNDLE="/usr/local/lib/python3.7/site-packages/certifi/cacert.pem"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -124,10 +123,6 @@ alias shred='gshred -n 7 -z -u'
 alias l='ls -lAthr'
 alias bpython='python -m bpython'
 alias bpython3='python3 -m bpython'
-alias apctl='appleconnect'
-alias apvpn='appleconnect n -s vpn -a'
-alias adddmz='sudo route add 192.168.6.0/24 192.168.2.1 && sudo route add -inet6 2600:8807:c002:5a06::/64 fe80::76ac:b9ff:fe37:1a33'
-alias deldmz='sudo route delete 192.168.4.0/24 && sudo route delete -inet6 2600:8807:c002:5a06::/64 fe80::76ac:b9ff:fe37:1a33'
 
 FPATH=~/.zsh_functions:$FPATH
 
