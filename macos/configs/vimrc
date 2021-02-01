@@ -1,5 +1,7 @@
 set nocompatible
 filetype off
+set ts=4
+set sw=4
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,9 +27,6 @@ set number
 set relativenumber
 "inoremap ;; <Esc>
 set backspace=indent,eol,start
-set ts=2
-set sw=2
-set sts=2
 
 "set backup
 "set writebackup
@@ -39,7 +38,11 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 
-:command Json %!python -m json.tool
+" Autopairs Settings
+let g:AutoPairsShortcutToggle='<C-p>'
+
+
+:command Json %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=2)"
 :command Nonum set nonumber norelativenumber
 :command Num set number relativenumber
 
