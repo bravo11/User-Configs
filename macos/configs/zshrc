@@ -144,3 +144,8 @@ if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc' ];
 
 
 #unsetopt histverify
+
+# Source system specific options
+if [[ -d ${HOME}/.zshrc.d ]]; then
+	source "${HOME}/.zshrc.d/*"
+fi
