@@ -1,9 +1,7 @@
-[user]
-	email = me@drick.org
-	name = Dalton Rick
-	signingkey = C9A92998FF289FEE
-[commit]
-  	gpgsign = true
-
+# This is Git's per-user configuration file.
 [core]
-	excludesfile = /Users/daltonrick/.gitignore_global
+	pager = less -F -X
+	excludesfile = /Users/dalton_rick/.gitignore_global
+[push]
+	followTags = true
+	default = current

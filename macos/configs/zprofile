@@ -1,3 +1,4 @@
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+# Source system specific options
+if [[ -d ${HOME}/.zprofile.d ]]; then
+    for file (${HOME}/.zprofile.d/**/*.zsh(N.)) . $file
+fi
