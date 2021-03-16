@@ -42,7 +42,7 @@
                         ]
                     },
                     {
-                        "description": "CMD+J To F19",
+                        "description": "CMD+J To F18",
                         "manipulators": [
                             {
                                 "from": {
@@ -55,7 +55,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f19"
+                                        "key_code": "f18"
                                     }
                                 ],
                                 "type": "basic"
@@ -105,7 +105,7 @@
                         ]
                     },
                     {
-                        "description": "CMD+K To F18",
+                        "description": "CMD+K To F19",
                         "manipulators": [
                             {
                                 "from": {
@@ -118,8 +118,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f18",
-                                        "modifiers": []
+                                        "key_code": "f19"
                                     }
                                 ],
                                 "type": "basic"
