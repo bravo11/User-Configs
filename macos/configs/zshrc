@@ -88,6 +88,10 @@ export PATH=$HOME/Library/Python/3.9/bin:/usr/local/bin:/usr/local/sbin:$HOME/Ap
 
 export PAGER="less -S" psql
 
+# Source system specific options
+if [[ -d ${HOME}/.zshrc.d ]]; then
+	for file (${HOME}/.zshrc.d/**/*.zsh(N.)) . $file
+fi
 # User configuration
 
 #export PATH=/Library/PostgreSQL/11/bin/psql:$PATH
@@ -123,6 +127,7 @@ alias shred='gshred -n 7 -z -u'
 alias l='ls -lAthr'
 alias bpython='python -m bpython'
 alias bpython3='python3 -m bpython'
+alias commit="git commit -S${SIGNKEY}"
 
 FPATH=~/.zsh_functions:$FPATH
 
@@ -140,7 +145,3 @@ if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc' ];
 
 #unsetopt histverify
 
-# Source system specific options
-if [[ -d ${HOME}/.zshrc.d ]]; then
-	for file (${HOME}/.zshrc.d/**/*.zsh(N.)) . $file
-fi
