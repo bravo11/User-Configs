@@ -5,5 +5,3 @@
 [push]
 	followTags = true
 	default = current
-[commit]
-	gpgsign = true

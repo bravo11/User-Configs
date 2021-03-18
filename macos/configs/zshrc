@@ -127,8 +127,8 @@ alias shred='gshred -n 7 -z -u'
 alias l='ls -lAthr'
 alias bpython='python -m bpython'
 alias bpython3='python3 -m bpython'
-alias commit="git commit -S${SIGNKEY}"
-alias tag="-u ${SIGNKEY}"
+alias commit="git commit -S${GIT_SIGNING_KEY}"
+alias tag="-u ${GIT_SIGNING_KEY}"
 
 FPATH=~/.zsh_functions:$FPATH
 
@@ -144,5 +144,5 @@ if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/path.zsh.inc' ]; then 
 if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 
 
-#unsetopt histverify
+unsetopt histverify
 
