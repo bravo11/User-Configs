@@ -405,7 +405,7 @@
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
-			<string>0x1b 0x08</string>
+			<string>0x01</string>
 		</dict>
 		<key>0x44-0x60000-0x2</key>
 		<dict>
@@ -447,15 +447,6 @@
 		<key>0x57-0x60000-0xd</key>
 		<dict>
 			<key>Action</key>
-			<integer>10</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string>d</string>
-		</dict>
-		<key>0x61-0x40000-0x0</key>
-		<dict>
-			<key>Action</key>
 			<integer>11</integer>
 			<key>Label</key>
 			<string></string>
@@ -471,14 +462,23 @@
 			<key>Text</key>
 			<string>b</string>
 		</dict>
-		<key>0x67-0x40000-0x5</key>
+		<key>0x64-0x40000-0x2</key>
 		<dict>
 			<key>Action</key>
 			<integer>11</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
-			<string>0x01</string>
+			<string>0x1b 0x08</string>
+		</dict>
+		<key>0x66-0x40000-0x3</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>d</string>
 		</dict>
 		<key>0x77-0x40000-0xd</key>
 		<dict>
