@@ -398,15 +398,6 @@
 			<key>Text</key>
 			<string>:</string>
 		</dict>
-		<key>0x42-0x60000-0xb</key>
-		<dict>
-			<key>Action</key>
-			<integer>11</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string>0x01</string>
-		</dict>
 		<key>0x44-0x60000-0x2</key>
 		<dict>
 			<key>Action</key>
@@ -443,15 +434,6 @@
 			<integer>19</integer>
 			<key>Text</key>
 			<string></string>
-		</dict>
-		<key>0x57-0x60000-0xd</key>
-		<dict>
-			<key>Action</key>
-			<integer>11</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string>0x05</string>
 		</dict>
 		<key>0x62-0x40000-0xb</key>
 		<dict>
