@@ -127,8 +127,6 @@ alias shred='gshred -n 7 -z -u'
 alias l='ls -lAthr'
 alias bpython='python -m bpython'
 alias bpython3='python3 -m bpython'
-alias commit="git commit -S${GIT_SIGNING_KEY}"
-alias tag="git tag -u ${GIT_SIGNING_KEY}"
 
 FPATH=~/.zsh_functions:$FPATH
 

@@ -5,3 +5,7 @@
 [push]
 	followTags = true
 	default = current
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
