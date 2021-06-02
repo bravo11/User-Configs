@@ -447,11 +447,11 @@
 		<key>0x64-0x40000-0x2</key>
 		<dict>
 			<key>Action</key>
-			<integer>11</integer>
+			<integer>10</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
-			<string>0x1b 0x08</string>
+			<string>d</string>
 		</dict>
 		<key>0x66-0x40000-0x3</key>
 		<dict>
@@ -460,16 +460,16 @@
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
-			<string>d</string>
+			<string>f</string>
 		</dict>
 		<key>0x77-0x40000-0xd</key>
 		<dict>
 			<key>Action</key>
-			<integer>10</integer>
+			<integer>11</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
-			<string>f</string>
+			<string>0x1b 0x08</string>
 		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
