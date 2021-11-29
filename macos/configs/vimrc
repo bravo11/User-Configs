@@ -1,3 +1,4 @@
+" The basics
 set nocompatible
 filetype off
 set ts=4
@@ -8,7 +9,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+" Plugins:
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'w0rp/ale'
@@ -18,6 +19,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/vim-lsp'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()
 filetype plugin on
@@ -28,25 +30,32 @@ set relativenumber
 "inoremap ;; <Esc>
 set backspace=indent,eol,start
 
-"set backup
-"set writebackup
 au BufWritePre * !cp % ~/.vim_backups/$(echo %:p | sed 's/\(.*\/\)\(.*\)/\2\/\1/g' | sed 's/\//::/g' | sed 's/::::/@/')$(date +\%Y\%m\%d\%H\%M\%S).bak
 
 " YCM Settings
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Vim-terraform Settings
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 
 " Autopairs Settings
 let g:AutoPairsShortcutToggle='<C-p>'
 
+" markdown viewer settings
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_perl=1
 
+
+" Pretty Format Json
 :command Json %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=2)"
+
+" Toggle numbers and relative on/off
 :command Nonum set nonumber norelativenumber
 :command Num set number relativenumber
 
-"RLS
+"RLS logic
 if executable('rls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'rls',
