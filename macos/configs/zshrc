@@ -87,8 +87,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/opt/brew/bin:/opt/brew/sbin:/usr/local/bin:/usr/local/sbin:$HOME/Applications/platform-tools:$HOME/.bin:$HOME/.rvm/bin:$PATH"
 #export PATH=$HOME/Library/Python/3.9/bin:/usr/local/bin:/usr/local/sbin:$HOME/Applications/platform-tools:$HOME/.bin:$HOME/.rvm/bin:$PATH
 
-export SSH_TTY="$(tty)"
-
 export PAGER="less -S" psql
 
 # Source system specific options
