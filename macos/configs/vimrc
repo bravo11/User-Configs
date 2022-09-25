@@ -1,8 +1,8 @@
 " The basics
 set nocompatible
 filetype off
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -19,7 +19,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/vim-lsp'
-Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'godlygeek/tabular'
+Plugin 'preservim/vim-markdown'
 
 call vundle#end()
 filetype plugin on
@@ -30,7 +31,15 @@ set relativenumber
 "inoremap ;; <Esc>
 set backspace=indent,eol,start
 
-au BufWritePre * !cp % ~/.vim_backups/$(echo %:p | sed 's/\(.*\/\)\(.*\)/\2\/\1/g' | sed 's/\//::/g' | sed 's/::::/@/')$(date +\%Y\%m\%d\%H\%M\%S).bak
+aug backitup
+	au!
+	au BufWritePre * silent !cp % ~/.vim_backups/$(echo %:p | sed 's/\(.*\/\)\(.*\)/\2\/\1/g' | sed 's/\//::/g' | sed 's/::::/@/')$(date +\%Y\%m\%d\%H\%M\%S).bak
+aug end
+
+aug python_format
+	au!
+	au BufWritePost *.py silent !black %
+aug end
 
 " YCM Settings
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -43,9 +52,9 @@ let g:terraform_fmt_on_save=1
 " Autopairs Settings
 let g:AutoPairsShortcutToggle='<C-p>'
 
-" markdown viewer settings
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_perl=1
+" Markdown Settings
+let g:vim_markdown_folding_disabled = 1
+set conceallevel=2
 
 
 " Pretty Format Json
