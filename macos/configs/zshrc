@@ -84,7 +84,7 @@ ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/Applications/platform-tools:$HOME/.bin:$HOME/.rvm/bin:$PATH"
+export PATH="$HOME/Applications/platform-tools:$HOME/.bin:$HOME/.rvm/bin:$PATH"
 
 export PAGER="less -S" psql
 export AWS_PAGER=''
