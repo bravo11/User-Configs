@@ -2,3 +2,4 @@
 if [[ -d ${HOME}/.zprofile.d ]]; then
     for file (${HOME}/.zprofile.d/**/*.zsh(N.)) . $file
 fi
+setopt HIST_IGNORE_SPACE
